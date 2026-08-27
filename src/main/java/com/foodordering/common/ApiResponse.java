@@ -1,0 +1,47 @@
+package com.foodordering.common;
+
+import lombok.*;
+
+import java.time.LocalDateTime;
+
+/**
+ * Generic standard API response wrapper for consistent REST API responses across all modules.
+ *
+ * @param <T> Payload data type
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ApiResponse<T> {
+
+    private boolean success;
+    private String message;
+    private T data;
+
+    @Builder.Default
+    private LocalDateTime timestamp = LocalDateTime.now();
+
+    public static <T> ApiResponse<T> success(String message, T data) {
+        return ApiResponse.<T>builder()
+                .success(true)
+                .message(message)
+                .data(data)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+
+    public static <T> ApiResponse<T> success(String message) {
+        return success(message, null);
+    }
+
+    public static <T> ApiResponse<T> error(String message) {
+        return ApiResponse.<T>builder()
+                .success(false)
+                .message(message)
+                .data(null)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+}
