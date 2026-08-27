@@ -32,11 +32,10 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Refresh catalog with custom items
-        foodRepository.deleteAll();
-        restaurantRepository.deleteAll();
-        categoryRepository.deleteAll();
-        userRepository.deleteAll();
+        // Only seed initial demo data if database is empty
+        if (userRepository.count() > 0) {
+            return;
+        }
 
         // 1. Seed Users
         User customer = User.builder()
