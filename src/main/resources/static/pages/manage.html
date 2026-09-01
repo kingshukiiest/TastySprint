@@ -1,0 +1,81 @@
+<!-- PAGE 4: ADMIN / RESTAURANT OWNER PORTAL -->
+<h2 style="margin-bottom: 1.5rem; color: #0f172a;">Admin & Restaurant Management Portal</h2>
+<div class="grid-2">
+
+    <!-- Add New Food Item Form -->
+    <div class="card">
+        <h3 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: #0f172a;">+ Create Menu Food Item</h3>
+        <form id="form-create-food">
+            <div class="form-group">
+                <label>Food Item Name</label>
+                <input type="text" id="mrg-food-name" placeholder="e.g. Kolkata Mutton Biryani" required>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="mrg-food-desc" rows="2" placeholder="Rich aromatic Basmati rice dum cooked with juicy mutton piece..."></textarea>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                <div class="form-group">
+                    <label>Price (₹)</label>
+                    <input type="number" step="0.01" id="mrg-food-price" placeholder="399" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="mrg-food-cat-id" required>
+                        <option value="">Select Category...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Restaurant</label>
+                <select id="mrg-food-rest-id" required>
+                    <option value="">Select Restaurant...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Image URL (Optional)</label>
+                <input type="url" id="mrg-food-img" placeholder="https://images.unsplash.com/photo-...">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Publish Food Item to Menu</button>
+        </form>
+    </div>
+
+    <!-- Category & Restaurant Creators -->
+    <div>
+        <!-- Create Restaurant -->
+        <div class="card">
+            <h3 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: #0f172a;">+ Register Restaurant</h3>
+            <form id="form-create-restaurant">
+                <div class="form-group">
+                    <label>Restaurant Name</label>
+                    <input type="text" id="mrg-rest-name" placeholder="e.g. Royal Mughlai & Biryani Station" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" id="mrg-rest-desc" placeholder="Authentic Mughlai Delicacies">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" id="mrg-rest-addr" placeholder="12 Park Street, Kolkata">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="mrg-rest-phone" placeholder="+91 98765 43210">
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Create Restaurant Profile</button>
+            </form>
+        </div>
+
+        <!-- Create Category -->
+        <div class="card">
+            <h3 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: #0f172a;">+ Add Food Category</h3>
+            <form id="form-create-category">
+                <div class="form-group">
+                    <label>Category Name</label>
+                    <input type="text" id="mrg-cat-name" placeholder="e.g. Biryani Specials" required>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Save Category</button>
+            </form>
+        </div>
+    </div>
+</div>

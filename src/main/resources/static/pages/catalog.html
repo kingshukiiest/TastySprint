@@ -1,0 +1,24 @@
+<!-- PAGE 1: MENU CATALOG & FOOD ORDERING -->
+<div class="hero-banner">
+    <div>
+        <h1 class="hero-title">Royal Mughlai & Indian Feast <br><span style="color: #64748b; font-weight: 600; font-size: 1.6rem;">Delicious Biryanis, Chaap & Thalis</span></h1>
+        <p class="hero-subtitle">Order authentic Kolkata Chicken Biryani, Mutton Biryani, Chicken Chaap, Veg Thali & Shakes.</p>
+        <div class="search-box">
+            <input type="text" id="search-input" class="search-input" placeholder="🔍 Search food by name (e.g. Chicken Biryani, Mutton Biryani, Fried Rice)...">
+        </div>
+    </div>
+    <div style="font-size: 6rem; display: none; @media(min-width:768px){display:block;}">
+        🍛
+    </div>
+</div>
+
+<!-- Categories Bar -->
+<div class="categories-bar" id="categories-container">
+    <button class="cat-pill active" onclick="filterByCategory(null)">All Foods</button>
+</div>
+
+<!-- Foods Grid -->
+<h2 style="margin-bottom: 1.25rem; font-size: 1.3rem; color: #0f172a;">Menu Catalog Items</h2>
+<div id="food-grid" class="grid-3">
+    <p class="text-muted">Loading menu catalog...</p>
+</div>

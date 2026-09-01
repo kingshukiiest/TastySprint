@@ -1,0 +1,41 @@
+<!-- FOOD REVIEWS MODAL OVERLAY -->
+<div id="reviews-modal" class="modal-overlay">
+    <div class="modal-card">
+        <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+            <h3 id="modal-food-title" style="font-size: 1.15rem; color:#0f172a;">Food Reviews</h3>
+            <button onclick="closeReviewsModal()" style="background:transparent; border:none; font-size:1.4rem; cursor:pointer; color:var(--text-muted);">&times;</button>
+        </div>
+
+        <div style="padding: 1.5rem; overflow-y: auto; flex:1;">
+            <!-- Customer Reviews List -->
+            <div id="modal-reviews-list">
+                <p class="text-muted">Loading reviews...</p>
+            </div>
+
+            <!-- Add Review Form -->
+            <div style="border-top: 1px solid var(--border); margin-top: 1.25rem; padding-top: 1rem;">
+                <h4 style="margin-bottom:0.75rem; color:#0f172a; font-size:0.95rem;">Add Your Review</h4>
+                <form id="form-add-review">
+                    <input type="hidden" id="review-food-id">
+                    <div style="display:grid; grid-template-columns: 1fr 2fr; gap:0.75rem; margin-bottom:0.75rem;">
+                        <div>
+                            <label style="font-size:0.8rem;">Rating</label>
+                            <select id="review-rating" required style="padding:0.55rem;">
+                                <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                                <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                                <option value="3">⭐⭐⭐ (3/5)</option>
+                                <option value="2">⭐⭐ (2/5)</option>
+                                <option value="1">⭐ (1/5)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="font-size:0.8rem;">Comment</label>
+                            <input type="text" id="review-comment" placeholder="Great taste & fresh!" required style="padding:0.55rem;">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%; padding:0.55rem; font-size:0.85rem;">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
